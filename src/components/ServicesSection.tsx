@@ -20,8 +20,8 @@ const services = [
     duration: "3-6 mesi",
     price: "€120",
     priceDetail: "a sessione",
-    color: "from-rose-500 to-pink-500",
-    bgColor: "from-rose-50 to-pink-50",
+            color: "from-azzurro-500 to-blue-500",
+        bgColor: "from-azzurro-50 to-blue-50",
     popular: true
   },
   {
@@ -100,7 +100,7 @@ const ServicesSection = () => {
     <section id="servizi" className="py-24 bg-gradient-to-b from-slate-50/50 via-white to-violet-50/40 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-rose-200/15 to-pink-200/15 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-azzurro-200/15 to-blue-200/15 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-violet-200/15 to-indigo-200/15 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-emerald-200/10 to-green-200/10 rounded-full blur-3xl"></div>
       </div>
@@ -108,12 +108,12 @@ const ServicesSection = () => {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-rose-50 to-emerald-50 border border-rose-200/50 rounded-full px-4 py-2 mb-6">
-            <Sparkles className="h-4 w-4 text-rose-500" />
+                      <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-azzurro-50 to-emerald-50 border border-azzurro-200/50 rounded-full px-4 py-2 mb-6">
+              <Sparkles className="h-4 w-4 text-azzurro-500" />
             <span className="text-sm font-medium text-gray-700">I Miei Servizi</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Percorsi di <span className="bg-gradient-to-r from-rose-600 to-emerald-600 bg-clip-text text-transparent">Trasformazione</span>
+            Percorsi di <span className="bg-gradient-to-r from-azzurro-600 to-emerald-600 bg-clip-text text-transparent">Trasformazione</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Ogni viaggio è unico, proprio come te. Scegli il percorso che risuona di più con i tuoi obiettivi e il tuo stile.
@@ -137,7 +137,7 @@ const ServicesSection = () => {
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
+                    <div className="bg-gradient-to-r from-azzurro-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
                       <Star className="h-4 w-4" />
                       <span>Più Richiesto</span>
                     </div>
@@ -146,8 +146,8 @@ const ServicesSection = () => {
 
                 <div className={`relative bg-white/90 backdrop-blur-sm rounded-2xl p-6 border-2 transition-all duration-300 shadow-lg ${
                   selectedService === service.id 
-                    ? 'border-rose-300 shadow-2xl shadow-rose-500/10' 
-                    : 'border-gray-200/50 hover:border-rose-200 hover:shadow-xl'
+                                    ? 'border-azzurro-300 shadow-2xl shadow-azzurro-500/10'
+                : 'border-gray-200/50 hover:border-azzurro-200 hover:shadow-xl'
                 }`}>
                   {/* Subtle Background Gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor} opacity-20 rounded-2xl`}></div>
@@ -167,7 +167,7 @@ const ServicesSection = () => {
                   <div className="relative space-y-4">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                      <p className="text-rose-600 font-medium text-base">{service.subtitle}</p>
+                      <p className="text-azzurro-600 font-medium text-base">{service.subtitle}</p>
                     </div>
                     
                     <p className="text-gray-700 leading-relaxed text-base">
@@ -185,7 +185,7 @@ const ServicesSection = () => {
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3">
                           <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
-                            feature.highlight ? 'bg-rose-500' : 'bg-gray-300'
+                            feature.highlight ? 'bg-azzurro-500' : 'bg-gray-300'
                           }`}>
                             <Check className={`h-3 w-3 ${feature.highlight ? 'text-white' : 'text-gray-600'}`} />
                           </div>
@@ -204,8 +204,8 @@ const ServicesSection = () => {
                       }}
                       className={`w-full mt-6 py-4 px-6 rounded-xl font-semibold text-base transition-all duration-300 flex items-center justify-center space-x-2 ${
                         selectedService === service.id
-                          ? 'bg-gradient-to-r from-rose-600 to-pink-600 text-white shadow-lg hover:shadow-xl'
-                          : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-rose-300 hover:text-rose-700'
+                                          ? 'bg-gradient-to-r from-azzurro-600 to-blue-600 text-white shadow-lg hover:shadow-xl'
+                : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-azzurro-300 hover:text-azzurro-700'
                       }`}
                     >
                       <span>Prenota una Chiamata</span>
@@ -219,7 +219,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-rose-600 to-emerald-600 rounded-3xl p-12 text-center text-white">
+                    <div className="relative overflow-hidden bg-gradient-to-br from-azzurro-600 to-emerald-600 rounded-3xl p-12 text-center text-white">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
@@ -240,7 +240,7 @@ const ServicesSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={scrollToContacts}
-                className="bg-white text-rose-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2"
+                className="bg-white text-azzurro-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2"
               >
                 <span>Chiamata Gratuita</span>
                 <ArrowRight className="h-5 w-5" />

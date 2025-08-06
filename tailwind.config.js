@@ -21,6 +21,19 @@ module.exports = {
           800: '#075985',
           900: '#0c4a6e',
         },
+        // Palette azzurra per sostituire il rosa
+        azzurro: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+        },
         secondary: {
           50: '#ecfdf5',
           100: '#d1fae5',
@@ -65,10 +78,10 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(135deg, #0ea5e9 0%, #14b8a6 50%, #10b981 100%)',
-        'section-gradient': 'linear-gradient(to bottom right, #f0f9ff 0%, #ecfdf5 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #3b82f6 0%, #0ea5e9 50%, #14b8a6 100%)',
+        'section-gradient': 'linear-gradient(to bottom right, #eff6ff 0%, #f0f9ff 100%)',
         'soft-gradient': 'linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%)',
-        'subtle-blue': 'linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%)',
+        'subtle-blue': 'linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%)',
         'subtle-green': 'linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%)',
         'elegant-dark': 'linear-gradient(135deg, #1e293b 0%, #334155 100%)',
       },

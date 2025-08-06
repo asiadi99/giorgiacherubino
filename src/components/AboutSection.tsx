@@ -13,7 +13,7 @@ const AboutSection = () => {
   };
 
   const stats = [
-    { icon: Users, number: '50+', label: 'Clienti Trasformati', color: 'from-rose-500 to-pink-500' },
+    { icon: Users, number: '50+', label: 'Clienti Trasformati', color: 'from-azzurro-500 to-blue-500' },
     { icon: Award, number: '5+', label: 'Anni di Esperienza', color: 'from-emerald-500 to-green-500' },
     { icon: Heart, number: '100%', label: 'Dedizione', color: 'from-blue-500 to-indigo-500' },
   ];
@@ -37,7 +37,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-gray-50/70 via-white to-rose-50/30 relative overflow-hidden">
+          <section id="about" className="py-24 bg-gradient-to-b from-gray-50/70 via-white to-azzurro-50/30 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0" style={{
@@ -47,18 +47,18 @@ const AboutSection = () => {
       </div>
       
       {/* Subtle Background Shapes */}
-      <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-rose-100/30 to-pink-100/30 rounded-full blur-3xl"></div>
+              <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-azzurro-100/30 to-blue-100/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-48 h-48 bg-gradient-to-br from-emerald-100/30 to-green-100/30 rounded-full blur-3xl"></div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-rose-50 to-emerald-50 border border-rose-200/50 rounded-full px-4 py-2 mb-6">
-            <Sparkles className="h-4 w-4 text-rose-500" />
+                      <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-azzurro-50 to-emerald-50 border border-azzurro-200/50 rounded-full px-4 py-2 mb-6">
+                          <Sparkles className="h-4 w-4 text-azzurro-500" />
             <span className="text-sm font-medium text-gray-700">Chi Sono</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Ciao, sono <span className="bg-gradient-to-r from-rose-600 to-emerald-600 bg-clip-text text-transparent">Giorgia</span>
+            Ciao, sono <span className="bg-gradient-to-r from-azzurro-600 to-emerald-600 bg-clip-text text-transparent">Giorgia</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             La tua guida verso una vita più autentica e consapevole
@@ -73,7 +73,7 @@ const AboutSection = () => {
             <div className="relative">
               {/* Main Image */}
               <div className="relative w-full aspect-square max-w-sm mx-auto">
-                <div className="absolute -inset-3 bg-gradient-to-br from-rose-200/30 to-emerald-200/30 rounded-3xl blur-xl"></div>
+                <div className="absolute -inset-3 bg-gradient-to-br from-azzurro-200/30 to-emerald-200/30 rounded-3xl blur-xl"></div>
                 <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src="/giorgia-profile.jpg"
@@ -86,12 +86,12 @@ const AboutSection = () => {
               </div>
               
               {/* Floating Quote */}
-              <div className="absolute -bottom-12 -right-6 bg-gradient-to-br from-white via-rose-50/50 to-emerald-50/50 rounded-2xl p-6 shadow-2xl border border-rose-200/30 max-w-sm backdrop-blur-sm">
-                <Quote className="h-8 w-8 text-rose-500 mb-3 animate-pulse-soft" />
+              <div className="absolute -bottom-12 -right-6 bg-gradient-to-br from-white via-azzurro-50/50 to-emerald-50/50 rounded-2xl p-6 shadow-2xl border border-azzurro-200/30 max-w-sm backdrop-blur-sm">
+                                  <Quote className="h-8 w-8 text-azzurro-500 mb-3 animate-pulse-soft" />
                 <p className="text-lg font-semibold text-gray-800 leading-relaxed italic">
                   &ldquo;Ogni persona ha dentro di sé tutto quello che serve per fiorire&rdquo;
                 </p>
-                <div className="mt-2 text-sm text-rose-600 font-medium">- Giorgia</div>
+                                  <div className="mt-2 text-sm text-azzurro-600 font-medium">- Giorgia</div>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ const AboutSection = () => {
                 onClick={() => handleTabChange('story')}
                 className={`pb-4 px-4 font-semibold transition-all duration-300 relative text-lg touch-target cursor-pointer ${
                   activeTab === 'story'
-                    ? 'text-rose-600 border-b-2 border-rose-600 bg-rose-50/50'
+                    ? 'text-azzurro-600 border-b-2 border-azzurro-600 bg-azzurro-50/50'
                     : 'text-gray-500 hover:text-gray-700 hover:border-b-2 hover:border-gray-300 hover:bg-gray-50/50'
                 }`}
                 type="button"
@@ -147,9 +147,9 @@ const AboutSection = () => {
                   className="space-y-6 animate-stagger-fade-in opacity-100 transition-opacity duration-500"
                   key="story-tab"
                 >
-                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-rose-100/50 shadow-sm">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-azzurro-100/50 shadow-sm">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                      <span className="w-8 h-8 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full flex items-center justify-center mr-3">
+                                              <span className="w-8 h-8 bg-gradient-to-r from-azzurro-500 to-blue-500 rounded-full flex items-center justify-center mr-3">
                         <Heart className="h-4 w-4 text-white" />
                       </span>
                       La Mia Storia
@@ -176,7 +176,7 @@ const AboutSection = () => {
                     
                     <div className="flex items-center space-x-4 pt-6 mt-6 border-t border-gray-100">
                       <div className="flex -space-x-2">
-                        <div className="w-10 h-10 bg-gradient-to-br from-rose-400 to-pink-400 rounded-full border-2 border-white flex items-center justify-center">
+                        <div className="w-10 h-10 bg-gradient-to-br from-azzurro-400 to-blue-400 rounded-full border-2 border-white flex items-center justify-center">
                           <Award className="h-5 w-5 text-white" />
                         </div>
                         <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-green-400 rounded-full border-2 border-white flex items-center justify-center">
@@ -243,9 +243,9 @@ const AboutSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-white/70 backdrop-blur-sm rounded-3xl p-12 border border-rose-200/30 shadow-lg relative overflow-hidden">
+                    <div className="text-center bg-white/70 backdrop-blur-sm rounded-3xl p-12 border border-azzurro-200/30 shadow-lg relative overflow-hidden">
           {/* Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-rose-50/50 to-emerald-50/50 rounded-3xl"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-azzurro-50/50 to-emerald-50/50 rounded-3xl"></div>
           <div className="relative">
             <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Pronta a iniziare il tuo viaggio?
@@ -256,7 +256,7 @@ const AboutSection = () => {
             </p>
             <button
               onClick={() => document.getElementById('contatti')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-rose-500/25 transition-all duration-300 inline-flex items-center space-x-2"
+                              className="bg-gradient-to-r from-azzurro-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-azzurro-500/25 transition-all duration-300 inline-flex items-center space-x-2"
             >
               <span>Parliamone Insieme</span>
               <ArrowRight className="h-5 w-5" />

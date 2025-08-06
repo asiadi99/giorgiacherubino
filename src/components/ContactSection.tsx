@@ -41,7 +41,7 @@ const ContactSection = () => {
     <section id="contatti" className="py-24 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-rose-300/10 to-pink-300/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-azzurro-300/10 to-blue-300/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-to-br from-emerald-300/10 to-green-300/10 rounded-full blur-3xl"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(236,72,153,0.03)_2px,transparent_2px),radial-gradient(circle_at_70%_80%,rgba(16,185,129,0.03)_2px,transparent_2px)] bg-[length:100px_100px]"></div>
       </div>
@@ -50,7 +50,7 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-6xl font-bold mb-8">
-            Inizia il Tuo <span className="bg-gradient-to-r from-rose-400 to-emerald-400 bg-clip-text text-transparent">Percorso</span>
+            Inizia il Tuo <span className="bg-gradient-to-r from-azzurro-400 to-emerald-400 bg-clip-text text-transparent">Percorso</span>
           </h2>
           <p className="text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium">
             Pronto a trasformare la tua vita? Scrivimi per una consulenza gratuita e scopriamo insieme 
@@ -90,7 +90,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-6 py-4 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300 text-lg"
+                  className="w-full px-6 py-4 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-azzurro-400 focus:border-transparent transition-all duration-300 text-lg"
                   placeholder="Il tuo nome completo"
                 />
               </div>
@@ -106,7 +106,7 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-6 py-4 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300 text-lg"
+                  className="w-full px-6 py-4 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-azzurro-400 focus:border-transparent transition-all duration-300 text-lg"
                   placeholder="la.tua@email.com"
                 />
               </div>
@@ -122,7 +122,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-6 py-4 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300 resize-none text-lg"
+                  className="w-full px-6 py-4 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-azzurro-400 focus:border-transparent transition-all duration-300 resize-none text-lg"
                   placeholder="Raccontami di te e dei tuoi obiettivi. Cosa ti ha portato qui? Quali sfide stai affrontando? Come posso aiutarti?"
                 />
               </div>
@@ -130,7 +130,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-rose-600 to-pink-600 text-white py-5 px-8 rounded-xl font-bold text-xl hover:shadow-lg hover:shadow-rose-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-[1.02]"
+                className="w-full bg-gradient-to-r from-azzurro-600 to-blue-600 text-white py-5 px-8 rounded-xl font-bold text-xl hover:shadow-lg hover:shadow-azzurro-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-[1.02]"
               >
                 {isSubmitting ? (
                   <>
@@ -166,7 +166,7 @@ const ContactSection = () => {
                 href="mailto:giorgiacherubinocoach@gmail.com"
                 className="flex items-center space-x-6 p-8 bg-white/15 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all duration-300 group border border-white/20"
               >
-                <div className="bg-gradient-to-r from-rose-600 to-pink-600 p-4 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-r from-azzurro-600 to-blue-600 p-4 rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <Mail className="h-7 w-7 text-white" />
                 </div>
                 <div>
@@ -182,7 +182,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-6 p-8 bg-white/15 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all duration-300 group border border-white/20"
               >
-                <div className="bg-gradient-to-r from-pink-600 to-purple-600 p-4 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-r from-azzurro-600 to-purple-600 p-4 rounded-xl group-hover:scale-110 transition-transform duration-300">
                   <Instagram className="h-7 w-7 text-white" />
                 </div>
                 <div>
@@ -205,14 +205,14 @@ const ContactSection = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="bg-gradient-to-r from-rose-600/20 to-emerald-600/20 rounded-2xl p-8 border border-white/30 backdrop-blur-sm">
+            <div className="bg-gradient-to-r from-azzurro-600/20 to-emerald-600/20 rounded-2xl p-8 border border-white/30 backdrop-blur-sm">
               <h4 className="text-2xl font-bold mb-4 text-white">Consulenza Gratuita</h4>
               <p className="text-lg text-white/90 mb-6 leading-relaxed">
                 Prenota una chiamata di 30 minuti per capire se possiamo lavorare insieme e quale percorso 
                 è più adatto ai tuoi obiettivi.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="bg-rose-500/20 text-rose-300 px-4 py-2 rounded-full text-base font-medium">
+                <span className="bg-azzurro-500/20 text-azzurro-300 px-4 py-2 rounded-full text-base font-medium">
                   ✓ Nessun impegno
                 </span>
                 <span className="bg-emerald-500/20 text-emerald-300 px-4 py-2 rounded-full text-base font-medium">

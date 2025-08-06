@@ -28,19 +28,19 @@ const HeroSection = () => {
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-rose-50/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-azzurro-50/50"></div>
         
         {/* Animated Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-rose-400/5 via-pink-400/5 to-emerald-400/5 animate-gradient-shift"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-azzurro-400/5 via-blue-400/5 to-emerald-400/5 animate-gradient-shift"></div>
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-24 h-24 bg-gradient-to-br from-rose-200/15 to-pink-200/15 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute top-20 left-10 w-24 h-24 bg-gradient-to-br from-azzurro-200/15 to-blue-200/15 rounded-full blur-2xl animate-float"></div>
         <div className="absolute top-40 right-20 w-20 h-20 bg-gradient-to-br from-emerald-200/15 to-green-200/15 rounded-full blur-2xl animate-float-delayed"></div>
         <div className="absolute bottom-40 left-1/4 w-28 h-28 bg-gradient-to-br from-violet-200/10 to-indigo-200/10 rounded-full blur-2xl animate-float-slow"></div>
         
         {/* Subtle Pattern */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, #ec4899 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle at 50% 50%, #3b82f6 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
         }}></div>
       </div>
@@ -53,11 +53,11 @@ const HeroSection = () => {
             
             {/* Badge */}
             <div 
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-rose-50 to-emerald-50 border border-rose-200/50 rounded-full px-4 py-2 animate-stagger-fade-in btn-micro gpu-accelerated"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-azzurro-50 to-emerald-50 border border-azzurro-200/50 rounded-full px-4 py-2 animate-stagger-fade-in btn-micro gpu-accelerated"
               role="banner"
               aria-label="Badge certificazione"
             >
-              <Sparkles className="h-4 w-4 text-rose-500" />
+                              <Sparkles className="h-4 w-4 text-azzurro-500" />
               <span className="text-sm font-medium text-gray-700">Life Coach Certificata</span>
             </div>
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
                 aria-level={1}
               >
                 <span className="block text-gray-900 animate-slide-in-left">Trasforma</span>
-                <span className="block bg-gradient-to-r from-rose-600 via-pink-600 to-emerald-600 bg-clip-text text-transparent animate-slide-in-right delay-300 animate-text-shine">
+                <span className="block bg-gradient-to-r from-azzurro-600 via-blue-600 to-emerald-600 bg-clip-text text-transparent animate-slide-in-right delay-300 animate-text-shine">
                   la tua Vita
                 </span>
               </h1>
@@ -91,7 +91,7 @@ const HeroSection = () => {
                 role="group"
                 aria-labelledby="approach-title"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl flex items-center justify-center animate-breathe">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-azzurro-500 to-blue-500 rounded-xl flex items-center justify-center animate-breathe">
                   <Heart className="h-6 w-6 text-white" aria-hidden="true" />
                 </div>
                 <div>
@@ -119,7 +119,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollToSection('contatti')}
-                className="group bg-gradient-to-r from-rose-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-rose-500/25 transition-all duration-300 flex items-center justify-center space-x-2 btn-micro animate-stagger-fade-in delay-500 animate-glow focus-ring gpu-accelerated"
+                className="group bg-gradient-to-r from-azzurro-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-azzurro-500/25 transition-all duration-300 flex items-center justify-center space-x-2 btn-micro animate-stagger-fade-in delay-500 animate-glow focus-ring gpu-accelerated"
                 aria-label="Inizia il tuo percorso di crescita personale con Giorgia"
                 type="button"
               >
@@ -129,7 +129,7 @@ const HeroSection = () => {
               
               <button
                 onClick={() => scrollToSection('servizi')}
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-rose-300 hover:text-rose-700 transition-all duration-300 btn-micro animate-stagger-fade-in delay-600 focus-ring gpu-accelerated"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-azzurro-300 hover:text-azzurro-700 transition-all duration-300 btn-micro animate-stagger-fade-in delay-600 focus-ring gpu-accelerated"
                 aria-label="Scopri tutti i servizi di coaching disponibili"
                 type="button"
               >
@@ -145,11 +145,11 @@ const HeroSection = () => {
                 aria-label="Testimonianza sociale"
               >
                 <div className="flex -space-x-2" aria-label="Avatar delle persone che hanno trasformato la loro vita">
-                  <div className="w-8 h-8 bg-gradient-to-br from-rose-400 to-pink-400 rounded-full border-2 border-white" aria-hidden="true"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-azzurro-400 to-blue-400 rounded-full border-2 border-white" aria-hidden="true"></div>
                   <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-green-400 rounded-full border-2 border-white" aria-hidden="true"></div>
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full border-2 border-white" aria-hidden="true"></div>
                   <div 
-                    className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-semibold"
+                    className="w-8 h-8 bg-gradient-to-br from-purple-400 to-azzurro-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-semibold"
                     aria-label="Più di 20 persone aggiuntive"
                   >
                     +20
@@ -165,7 +165,7 @@ const HeroSection = () => {
             <div className="relative animate-zoom-in delay-800">
               {/* Main Image */}
               <div className="relative w-72 h-72 lg:w-80 lg:h-80">
-                <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 to-emerald-500/20 rounded-full blur-2xl animate-breathe"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-azzurro-500/20 to-emerald-500/20 rounded-full blur-2xl animate-breathe"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-3 border-white card-micro gpu-accelerated">
                   <Image
                     src="/giorgia-profile.jpg"
@@ -181,7 +181,7 @@ const HeroSection = () => {
               
               {/* Floating Elements */}
               <div 
-                className="absolute -top-3 -left-3 w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg animate-bounce-slow btn-micro"
+                className="absolute -top-3 -left-3 w-14 h-14 bg-gradient-to-br from-azzurro-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg animate-bounce-slow btn-micro"
                 aria-label="Icona decorativa stelle"
                 role="img"
               >

@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-rose-500/95 via-pink-500/95 to-emerald-500/95 backdrop-blur-xl shadow-lg border-b border-white/20">
+          <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-azzurro-500/95 via-blue-500/95 to-emerald-500/95 backdrop-blur-xl shadow-lg border-b border-white/20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0" style={{

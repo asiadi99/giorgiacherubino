@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
       {/* Main Footer with Gradient Background */}
-      <div className="bg-gradient-to-br from-slate-800/95 via-rose-700/95 to-emerald-700/95">
+              <div className="bg-gradient-to-br from-slate-800/95 via-azzurro-700/95 to-emerald-700/95">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-rose-400/20 to-pink-400/20 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-azzurro-400/20 to-blue-400/20 rounded-full blur-2xl animate-float"></div>
         <div className="absolute top-20 right-20 w-16 h-16 bg-gradient-to-r from-emerald-400/20 to-green-400/20 rounded-full blur-2xl animate-float-delayed"></div>
         <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-gradient-to-r from-violet-400/15 to-indigo-400/15 rounded-full blur-2xl animate-float-slow"></div>
 
