@@ -75,7 +75,7 @@ const Footer = () => {
                     <Star key={i} className="h-5 w-5 text-yellow-300 fill-current" />
                   ))}
                 </div>
-                <p className="text-white/95 italic mb-4 text-lg leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-white/95 italic mb-4 text-lg leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
                 <p className="text-white/80 text-base font-semibold">- {testimonial.author}</p>
               </div>
             ))}

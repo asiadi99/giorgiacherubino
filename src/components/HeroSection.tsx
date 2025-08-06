@@ -67,7 +67,7 @@ const HeroSection = () => {
                 className="text-5xl lg:text-7xl font-bold leading-tight animate-stagger-fade-in delay-200 gpu-accelerated"
                 aria-live="polite"
                 role="heading"
-                aria-level="1"
+                aria-level={1}
               >
                 <span className="block text-gray-900 animate-slide-in-left">Trasforma</span>
                 <span className="block bg-gradient-to-r from-rose-600 via-pink-600 to-emerald-600 bg-clip-text text-transparent animate-slide-in-right delay-300 animate-text-shine">

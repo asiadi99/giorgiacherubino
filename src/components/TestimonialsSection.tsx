@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
             <div className="bg-white rounded-3xl p-8 md:p-12 text-center">
               <Quote className="h-12 w-12 text-rose-500 mx-auto mb-6" />
               <blockquote className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-                "Ti aiuto a ottenere autostima e direzione senza perdere più tempo grazie a un metodo unico e completo."
+                &ldquo;Ti aiuto a ottenere autostima e direzione senza perdere più tempo grazie a un metodo unico e completo.&rdquo;
               </blockquote>
               <div className="flex items-center justify-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-500 rounded-full flex items-center justify-center">
@@ -264,7 +264,7 @@ const TestimonialsSection = () => {
           
           <div className="relative">
             <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Vuoi avere l'autostima al massimo senza perdere chi sei?
+              Vuoi avere l&apos;autostima al massimo senza perdere chi sei?
             </h3>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               <strong>Mettimi alla prova GRATIS per 30 giorni</strong>, paghi solo se sei soddisfatto del risultato.

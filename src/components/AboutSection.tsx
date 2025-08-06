@@ -89,7 +89,7 @@ const AboutSection = () => {
               <div className="absolute -bottom-12 -right-6 bg-gradient-to-br from-white via-rose-50/50 to-emerald-50/50 rounded-2xl p-6 shadow-2xl border border-rose-200/30 max-w-sm backdrop-blur-sm">
                 <Quote className="h-8 w-8 text-rose-500 mb-3 animate-pulse-soft" />
                 <p className="text-lg font-semibold text-gray-800 leading-relaxed italic">
-                  "Ogni persona ha dentro di sé tutto quello che serve per fiorire"
+                  &ldquo;Ogni persona ha dentro di sé tutto quello che serve per fiorire&rdquo;
                 </p>
                 <div className="mt-2 text-sm text-rose-600 font-medium">- Giorgia</div>
               </div>
