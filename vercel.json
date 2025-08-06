@@ -48,7 +48,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|ico|png|jpg|jpeg|svg|woff|woff2))",
+      "source": "/_next/static/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
