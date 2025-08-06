@@ -1,0 +1,58 @@
+{
+  "name": "Giorgia Cherubino - Life Coach",
+  "short_name": "Giorgia Coach",
+  "description": "Trasforma la tua vita con autostima e direzione. Life Coach certificata specializzata in crescita personale.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ec4899",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "it-IT",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/giorgia-profile.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["health", "lifestyle", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Contattami",
+      "short_name": "Contatti",
+      "description": "Contatta Giorgia per una consulenza gratuita",
+      "url": "/#contatti",
+      "icons": [{ "src": "/favicon.ico", "sizes": "32x32" }]
+    },
+    {
+      "name": "Servizi",
+      "short_name": "Servizi",
+      "description": "Scopri tutti i servizi di coaching",
+      "url": "/#servizi",
+      "icons": [{ "src": "/favicon.ico", "sizes": "32x32" }]
+    },
+    {
+      "name": "Testimonianze",
+      "short_name": "Testimonianze",
+      "description": "Leggi le testimonianze dei clienti",
+      "url": "/#testimonianze",
+      "icons": [{ "src": "/favicon.ico", "sizes": "32x32" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

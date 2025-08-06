@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Giorgia Cherubino - Life Coach Website
 
-## Getting Started
+Un sito web moderno e professionale per Giorgia Cherubino, life coach specializzata in percorsi di crescita personale e consapevolezza.
 
-First, run the development server:
+## 🌟 Caratteristiche
 
+- **Design Moderno**: UI/UX curata con palette colori coerente (blu-verde sfumato)
+- **Responsive**: Ottimizzato per tutti i dispositivi (desktop, tablet, mobile)
+- **Performance**: Build ottimizzata con Next.js 15
+- **Animazioni Fluide**: Transizioni e animazioni per un'esperienza coinvolgente
+- **SEO Ottimizzato**: Metadata e struttura ottimizzati per i motori di ricerca
+
+## 🚀 Sezioni del Sito
+
+1. **Hero Slideshow**: Presentazione dinamica con messaggi motivazionali e CTA
+2. **Servizi**: Descrizione chiara dei percorsi offerti
+3. **Testimonianze**: Video e testimonianze scritte dei clienti
+4. **La Mia Storia**: Racconto personale del percorso professionale
+5. **Contatti**: Modulo di contatto funzionale e informazioni di contatto
+
+## 🛠 Tecnologie Utilizzate
+
+- **Next.js 15**: Framework React per applicazioni web
+- **TypeScript**: Tipizzazione statica per maggiore robustezza
+- **Tailwind CSS**: Framework CSS utility-first
+- **Framer Motion**: Libreria per animazioni fluide
+- **Lucide React**: Icone moderne e leggere
+- **Vercel**: Piattaforma di hosting e deployment
+
+## 📱 Responsiveness
+
+Il sito è completamente responsive e ottimizzato per:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
+
+## 🎨 Palette Colori
+
+Basata sulla foto profilo di Giorgia, la palette include:
+- **Primary**: Blu (#0ea5e9 - #0284c7)
+- **Secondary**: Verde (#10b981 - #059669)
+- **Accent**: Teal (#14b8a6 - #0d9488)
+- **Neutral**: Grigi (#fafafa - #171717)
+
+## 🚀 Deploy su Vercel
+
+### Opzione 1: Deploy Automatico
+1. Vai su [vercel.com](https://vercel.com)
+2. Collega il tuo account GitHub
+3. Importa questo repository
+4. Vercel rileverà automaticamente Next.js e farà il deploy
+
+### Opzione 2: Deploy da CLI
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install -g vercel
+vercel login
+vercel --prod
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Opzione 3: Deploy Manuale
+1. Esegui `npm run build`
+2. Carica la cartella `.next` su Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Sviluppo Locale
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisiti
+- Node.js 18+ 
+- npm o yarn
 
-## Learn More
+### Installazione
+```bash
+# Clona il repository
+git clone [url-repository]
+cd giorgia-cherubino-site
 
-To learn more about Next.js, take a look at the following resources:
+# Installa le dipendenze
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Avvia il server di sviluppo
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Il sito sarà disponibile su `http://localhost:3000`
 
-## Deploy on Vercel
+### Comandi Disponibili
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Sviluppo
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Build di produzione
+npm run build
+
+# Avvia la versione di produzione
+npm start
+
+# Linting
+npm run lint
+```
+
+## 📁 Struttura del Progetto
+
+```
+giorgia-cherubino-site/
+├── public/
+│   ├── giorgia-profile.jpg     # Foto profilo
+│   └── ...                     # Altri asset statici
+├── src/
+│   ├── app/
+│   │   ├── globals.css         # Stili globali
+│   │   ├── layout.tsx          # Layout principale
+│   │   └── page.tsx            # Homepage
+│   └── components/
+│       ├── Header.tsx          # Header con navigazione
+│       ├── Footer.tsx          # Footer
+│       ├── HeroSlideshow.tsx   # Slideshow hero
+│       ├── ServicesSection.tsx # Sezione servizi
+│       ├── TestimonialsSection.tsx # Testimonianze
+│       ├── StorySection.tsx    # La mia storia
+│       └── ContactSection.tsx  # Contatti
+├── tailwind.config.js          # Configurazione Tailwind
+├── vercel.json                 # Configurazione Vercel
+└── package.json
+```
+
+## 🎯 Personalizzazioni
+
+### Modificare i Contenuti
+- **Servizi**: Modifica `src/components/ServicesSection.tsx`
+- **Testimonianze**: Aggiorna gli array in `src/components/TestimonialsSection.tsx`
+- **Storia**: Personalizza `src/components/StorySection.tsx`
+- **Contatti**: Configura `src/components/ContactSection.tsx`
+
+### Modificare i Colori
+Aggiorna `tailwind.config.js` nella sezione `theme.extend.colors`
+
+### Aggiungere Nuove Sezioni
+1. Crea un nuovo componente in `src/components/`
+2. Importalo e aggiungilo in `src/app/page.tsx`
+
+## 📧 Contatti e Supporto
+
+Per supporto tecnico o modifiche al sito:
+- Email: [inserire email sviluppatore]
+- GitHub: [inserire link repository]
+
+## 📄 Licenza
+
+Questo progetto è sviluppato specificamente per Giorgia Cherubino. Tutti i diritti riservati.
+
+---
+
+**Sviluppato con ❤️ per la crescita personale e il benessere**
