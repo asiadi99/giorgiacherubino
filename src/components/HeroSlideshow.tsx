@@ -60,12 +60,7 @@ const HeroSlideshow = () => {
     setIsAutoPlaying(false);
   };
 
-  const scrollToContacts = () => {
-    const element = document.getElementById('contatti');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
 
   return (
     <section id="home" className="relative h-screen overflow-hidden">
@@ -101,13 +96,15 @@ const HeroSlideshow = () => {
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                      <button
-                        onClick={scrollToContacts}
+                      <a
+                        href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group bg-white text-primary-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
                       >
                         <span>{slide.cta}</span>
                         <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      </a>
                       <button
                         onClick={() => document.getElementById('servizi')?.scrollIntoView({ behavior: 'smooth' })}
                         className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-600 transition-all duration-300"

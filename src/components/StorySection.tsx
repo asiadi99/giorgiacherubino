@@ -64,26 +64,55 @@ const StorySection = () => {
           <div className="order-1 lg:order-2 space-y-6">
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
               <p>
-                Il mio viaggio nel mondo della crescita personale è iniziato dalla mia stessa esperienza di trasformazione. 
-                Come molte persone, ho attraversato momenti di incertezza e ricerca di senso che mi hanno spinta a 
-                esplorare nuove possibilità.
+                <strong className="text-primary-600">La mia storia voglio che sia:</strong><br/>
+                <strong className="text-primary-600">Avevo 8 anni.</strong><br/>
+                Era una domenica qualsiasi...
               </p>
               
               <p>
-                Ho scoperto che la <strong className="text-primary-600">consapevolezza</strong> è la chiave per vivere 
-                una vita autentica e appagante. Questa scoperta ha cambiato radicalmente la mia prospettiva e mi ha 
-                ispirata a condividere questi strumenti con altre persone.
+                Papà era uscito in moto. Io ero a casa tranquilla, con la mia famiglia.<br/>
+                Finché non ho sentito mia madre urlare al telefono:<br/>
+                <em>&ldquo;Perché non risponde NESSUNO di loro?&rdquo;</em>...
               </p>
               
               <p>
-                Oggi, dopo anni di formazione e pratica, accompagno individui e gruppi nel loro percorso di 
-                <strong className="text-accent-600"> crescita personale</strong>, aiutandoli a superare i blocchi 
-                che li limitano e a costruire la vita che desiderano veramente.
+                Non ho capito subito.<br/>
+                Ma da lì in poi, non è tornato più niente.<br/>
+                <strong className="text-primary-600">Papà non c&apos;era più.</strong>
               </p>
               
               <p>
-                La mia missione è semplice: <em>aiutare ogni persona a riconnettersi con la propria essenza autentica 
-                e a vivere con maggiore consapevolezza e gioia</em>.
+                Fine della gioia. Inizio del vuoto.<br/>
+                Tutto ciò che conoscevo si è sgretolato in un secondo.
+              </p>
+              
+              <p>
+                A scuola vedevo enormi differenze.<br/>
+                Gli altri crescevano sereni, io affondavo nel silenzio.<br/>
+                Autostima sotto i piedi, relazioni tossiche, e un vuoto nel petto che non mi lasciava mai.
+              </p>
+              
+              <p>
+                Sì, sorridevo. Mi mostravo forte. Ma dentro vivevo confusione, insicurezza, e quella sensazione costante di non valere nulla.
+              </p>
+              
+              <p>
+                Per anni ho cercato di aggiustarmi da fuori...<br/>
+                Ma la verità? Stavo solo cercando nel posto sbagliato.
+              </p>
+              
+              <p>
+                <strong className="text-accent-600">5 anni di duro lavoro su me stessa</strong>, errori e verità scomode. 
+                Ho investito oltre <strong className="text-primary-600">60.000 euro</strong> tra corsi, terapeuti, coach e formazione costante.
+              </p>
+              
+              <p>
+                Tutto questo non per diventare &ldquo;perfetta&rdquo;, ma per diventare <strong className="text-accent-600">libera e vera</strong>.
+              </p>
+              
+              <p>
+                E oggi tutto questo è diventato un <strong className="text-primary-600">metodo unico e consolidato</strong> 
+                che puoi applicare anche tu <strong className="text-accent-600">fin da subito</strong>.
               </p>
             </div>
 

@@ -36,26 +36,28 @@ const Footer = () => {
           <div className="text-center mb-12">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
               <Sparkles className="h-4 w-4 text-yellow-300" />
-              <span className="text-white/90 text-sm font-medium">Pronta per il Cambiamento?</span>
+              <span className="text-white/90 text-sm font-medium">Pronto/a per il Cambiamento?</span>
             </div>
             
             <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8">
               Inizia il Tuo <span className="text-yellow-300">Viaggio</span> Oggi
             </h2>
             
-            <p className="text-2xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+            <p className="text-2xl text-white-high-contrast max-w-2xl mx-auto mb-10 leading-relaxed font-bold">
               Non aspettare domani per iniziare a vivere la vita che desideri. 
               Prenota una chiamata gratuita e scopri come posso aiutarti.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => document.getElementById('contatti')?.scrollIntoView({ behavior: 'smooth' })}
+              <a
+                href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 inline-flex items-center justify-center space-x-2 hover:scale-105"
               >
                 <span>Chiamata Gratuita</span>
                 <Star className="h-5 w-5" />
-              </button>
+              </a>
               
               <button
                 onClick={() => document.getElementById('servizi')?.scrollIntoView({ behavior: 'smooth' })}
@@ -75,8 +77,8 @@ const Footer = () => {
                     <Star key={i} className="h-5 w-5 text-yellow-300 fill-current" />
                   ))}
                 </div>
-                <p className="text-white/95 italic mb-4 text-lg leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
-                <p className="text-white/80 text-base font-semibold">- {testimonial.author}</p>
+                <p className="text-white-high-contrast italic mb-4 text-lg leading-relaxed font-semibold">&ldquo;{testimonial.text}&rdquo;</p>
+                <p className="text-white-high-contrast text-base font-bold">- {testimonial.author}</p>
               </div>
             ))}
           </div>

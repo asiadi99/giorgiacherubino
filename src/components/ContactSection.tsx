@@ -49,11 +49,11 @@ const ContactSection = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
-            Inizia il Tuo <span className="bg-gradient-to-r from-azzurro-400 to-emerald-400 bg-clip-text text-transparent">Percorso</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-white-high-contrast">
+            Inizia il Tuo <span className="text-azzurro-400">Percorso</span>
           </h2>
-          <p className="text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium">
-            Pronto a trasformare la tua vita? Scrivimi per una consulenza gratuita e scopriamo insieme 
+          <p className="text-2xl text-white-high-contrast max-w-3xl mx-auto leading-relaxed font-bold">
+            Pronto/a a trasformare la tua vita? Scrivimi per una consulenza gratuita e scopriamo insieme 
             quale percorso è più adatto a te.
           </p>
         </div>
@@ -63,7 +63,7 @@ const ContactSection = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-white">Scrivimi un Messaggio</h3>
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              <p className="text-xl text-white-high-contrast mb-8 leading-relaxed font-semibold">
                 Compila il modulo e ti risponderò entro 24 ore. La prima consulenza è sempre gratuita.
               </p>
             </div>
@@ -130,7 +130,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-azzurro-600 to-blue-600 text-white py-5 px-8 rounded-xl font-bold text-xl hover:shadow-lg hover:shadow-azzurro-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-[1.02]"
+                className="w-full bg-azzurro-600 text-white py-5 px-8 rounded-xl font-bold text-xl hover:shadow-lg hover:shadow-azzurro-500/25 transition-all duration-300 flex items-center justify-center space-x-2 btn-enhanced focus-enhanced"
               >
                 {isSubmitting ? (
                   <>

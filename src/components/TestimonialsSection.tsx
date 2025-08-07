@@ -128,9 +128,7 @@ const TestimonialsSection = () => {
     setCurrentWritten((prev) => (prev - 1 + writtenTestimonials.length) % writtenTestimonials.length);
   };
 
-  const scrollToContact = () => {
-    document.getElementById('contatti')?.scrollIntoView({ behavior: 'smooth' });
-  };
+
 
   // ============================================================================
   // RENDER HELPERS
@@ -251,10 +249,10 @@ const TestimonialsSection = () => {
             HEADER SECTION
         ======================================================================== */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Cosa Dicono di <span className="bg-gradient-to-r from-azzurro-600 to-emerald-600 bg-clip-text text-transparent">Me</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-high-contrast">
+            Cosa Dicono di <span className="text-azzurro-600 text-shadow-enhanced">Me</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-high-contrast max-w-3xl mx-auto leading-relaxed mb-8">
             Le parole di chi ha trasformato la propria autostima e direzione con il mio metodo unico.
           </p>
           
@@ -263,16 +261,16 @@ const TestimonialsSection = () => {
             <div className="flex items-center space-x-3">
               {renderStars(5)}
               <div>
-                <span className="text-2xl font-bold text-gray-900">4.9/5</span>
-                <p className="text-gray-600 text-sm">valutazione media</p>
+                <span className="text-2xl font-bold text-high-contrast">4.9/5</span>
+                <p className="text-high-contrast text-sm font-semibold">valutazione media</p>
               </div>
             </div>
             
-            <div className="h-12 w-px bg-gray-300 hidden sm:block"></div>
+            <div className="h-12 w-px bg-gray-400 hidden sm:block"></div>
             
             <div className="text-center">
-              <span className="text-2xl font-bold text-gray-900">10+</span>
-              <p className="text-gray-600 text-sm">coachee soddisfatti<br/>in tutta Italia</p>
+              <span className="text-2xl font-bold text-high-contrast">10+</span>
+              <p className="text-high-contrast text-sm font-semibold">coachee soddisfatti<br/>in tutta Italia</p>
             </div>
           </div>
         </div>
@@ -281,19 +279,19 @@ const TestimonialsSection = () => {
             FEATURED TESTIMONIAL QUOTE
         ======================================================================== */}
         <div className="mb-16">
-          <div className="bg-gradient-to-br from-azzurro-600 to-emerald-600 rounded-3xl p-1 max-w-4xl mx-auto">
+          <div className="bg-azzurro-600 rounded-3xl p-1 max-w-4xl mx-auto shadow-2xl">
             <div className="bg-white rounded-3xl p-8 md:p-12 text-center">
-                              <Quote className="h-12 w-12 text-azzurro-500 mx-auto mb-6" />
-              <blockquote className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                              <Quote className="h-12 w-12 text-azzurro-500 mx-auto mb-6 icon-enhanced" />
+              <blockquote className="text-2xl md:text-3xl font-bold text-high-contrast mb-6 leading-tight text-shadow-light">
                 &ldquo;Ti aiuto a ottenere autostima e direzione senza perdere più tempo grazie a un metodo unico e completo.&rdquo;
               </blockquote>
               <div className="flex items-center justify-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-azzurro-500 to-blue-500 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-azzurro-600 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-lg">G</span>
                 </div>
                 <div className="text-left">
-                  <p className="font-semibold text-gray-900">Giorgia Cherubino</p>
-                  <p className="text-gray-600 text-sm">Life Coach Certificata</p>
+                  <p className="font-bold text-high-contrast">Giorgia Cherubino</p>
+                  <p className="text-high-contrast text-sm font-semibold">Life Coach Certificata</p>
                 </div>
               </div>
             </div>
@@ -310,10 +308,10 @@ const TestimonialsSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 text-center">
+              <div key={index} className="bg-enhanced rounded-2xl p-6 shadow-lg border-enhanced hover:shadow-xl transition-all duration-300 text-center hover-enhanced">
                 <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{benefit.desc}</p>
+                <h4 className="text-lg font-bold text-high-contrast mb-3">{benefit.title}</h4>
+                <p className="text-high-contrast text-sm leading-relaxed font-medium">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -377,7 +375,7 @@ const TestimonialsSection = () => {
         {/* ========================================================================
             CALL TO ACTION SECTION
         ======================================================================== */}
-        <div className="text-center bg-gradient-to-br from-azzurro-50 to-emerald-50 rounded-3xl p-12 border border-azzurro-200/30 shadow-lg relative overflow-hidden mb-20">
+        <div className="text-center bg-white rounded-3xl p-12 border border-azzurro-200/30 shadow-lg relative overflow-hidden mb-20">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-30">
             <div className="absolute inset-0" style={{
@@ -387,24 +385,26 @@ const TestimonialsSection = () => {
           </div>
           
           <div className="relative">
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h3 className="text-3xl lg:text-4xl font-bold text-high-contrast mb-6">
               Vuoi avere l&apos;autostima al massimo senza perdere chi sei?
             </h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              <strong>Mettimi alla prova GRATIS per 30 giorni</strong>, paghi solo se sei soddisfatto del risultato.
+            <p className="text-xl text-high-contrast mb-8 max-w-2xl mx-auto leading-relaxed">
+              <strong>Prova GRATIS per 30 giorni, paghi solo se sei soddisfatto del risultato.</strong>
             </p>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-lg text-high-contrast mb-8">
               Non hai nulla da perdere ma solo da guadagnare. Dopo 30 giorni potrai decidere in tutta libertà se continuare la nostra collaborazione.
             </p>
-            <button
-              onClick={scrollToContact}
-              className="bg-gradient-to-r from-azzurro-600 to-blue-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-lg hover:shadow-azzurro-500/25 transition-all duration-300 inline-flex items-center space-x-3"
+            <a
+              href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-azzurro-600 to-blue-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl hover:shadow-azzurro-500/25 transition-all duration-300 inline-flex items-center space-x-3 btn-enhanced focus-enhanced"
             >
               <span>Inizia ora gratis</span>
-              <div className="text-sm bg-white/20 px-3 py-1 rounded-full">
+              <div className="text-sm bg-white/30 px-3 py-1 rounded-full font-semibold">
                 zero vincoli, zero stress
               </div>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -418,27 +418,27 @@ const TestimonialsSection = () => {
 
           <div className="relative">
             {/* Current Testimonial */}
-            <div className="bg-white rounded-xl p-8 md:p-12 shadow-sm max-w-4xl mx-auto border border-gray-100">
+            <div className="bg-enhanced rounded-xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto border-enhanced">
               <div className="flex items-start space-x-4 mb-6">
-                <Quote className="h-8 w-8 text-azzurro-600 flex-shrink-0 mt-2" />
+                                  <Quote className="h-8 w-8 text-azzurro-500 flex-shrink-0 mt-2 icon-enhanced" />
                 <div className="flex-1">
-                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
+                  <p className="text-lg md:text-xl text-high-contrast leading-relaxed mb-6 italic">
                     &ldquo;{writtenTestimonials[currentWritten].text}&rdquo;
                   </p>
                   
                   <div className="flex items-center justify-between flex-wrap gap-4">
                     <div>
-                      <h4 className="font-semibold text-gray-900 text-lg">
+                      <h4 className="font-bold text-high-contrast text-lg">
                         {writtenTestimonials[currentWritten].name}
                       </h4>
-                      <p className="text-gray-600">
+                      <p className="text-high-contrast font-semibold">
                         {writtenTestimonials[currentWritten].role}
                       </p>
                     </div>
                     
                     <div className="flex items-center space-x-4">
                       {renderStars(writtenTestimonials[currentWritten].rating)}
-                      <span className="text-gray-500 text-sm">
+                      <span className="text-high-contrast text-sm font-semibold">
                         {writtenTestimonials[currentWritten].date}
                       </span>
                     </div>
@@ -450,16 +450,16 @@ const TestimonialsSection = () => {
             {/* Written Navigation */}
             <button
               onClick={prevWritten}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-300"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-enhanced shadow-xl rounded-full p-3 hover:shadow-2xl transition-all duration-300 focus-enhanced"
             >
-              <ChevronLeft className="h-6 w-6 text-gray-700" />
+              <ChevronLeft className="h-6 w-6 text-high-contrast icon-enhanced" />
             </button>
             
             <button
               onClick={nextWritten}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-300"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-enhanced shadow-xl rounded-full p-3 hover:shadow-2xl transition-all duration-300 focus-enhanced"
             >
-              <ChevronRight className="h-6 w-6 text-gray-700" />
+              <ChevronRight className="h-6 w-6 text-high-contrast icon-enhanced" />
             </button>
 
             {/* Dots Indicator */}
@@ -470,8 +470,8 @@ const TestimonialsSection = () => {
                   onClick={() => setCurrentWritten(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentWritten
-                      ? 'bg-azzurro-600 scale-125'
-                      : 'bg-gray-300 hover:bg-gray-400'
+                      ? 'bg-azzurro-600 scale-125 shadow-md'
+                      : 'bg-gray-400 hover:bg-gray-500 shadow-sm'
                   }`}
                 />
               ))}

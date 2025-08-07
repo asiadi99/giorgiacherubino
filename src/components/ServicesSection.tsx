@@ -6,6 +6,26 @@ import { Heart, Users, Target, Lightbulb, ArrowRight, Check, Sparkles, Clock, St
 const services = [
   {
     id: 1,
+    icon: Target,
+    title: "Pacchetto Completo",
+    subtitle: "Il percorso definitivo",
+    description: "Un programma completo che include 12 sessioni individuali, video corso esclusivo e bonus speciali che scoprirai durante la chiamata.",
+    features: [
+      { text: "12 sessioni individuali personalizzate", highlight: true },
+      { text: "Video corso esclusivo", highlight: false },
+      { text: "Bonus speciali (scopri in call)", highlight: false },
+      { text: "Supporto continuo completo", highlight: false },
+      { text: "Percorso completo di trasformazione", highlight: false }
+    ],
+    duration: "6-8 mesi",
+    price: "Su richiesta",
+    priceDetail: "prezzo personalizzato",
+    color: "from-rose-500 to-pink-500",
+    bgColor: "from-rose-50 to-pink-50",
+    popular: true
+  },
+  {
+    id: 2,
     icon: Heart,
     title: "Coaching Individuale",
     subtitle: "Il percorso più personalizzato",
@@ -20,12 +40,12 @@ const services = [
     duration: "3-6 mesi",
     price: "€120",
     priceDetail: "a sessione",
-            color: "from-azzurro-500 to-blue-500",
-        bgColor: "from-azzurro-50 to-blue-50",
-    popular: true
+    color: "from-azzurro-500 to-blue-500",
+    bgColor: "from-azzurro-50 to-blue-50",
+    popular: false
   },
   {
-    id: 2,
+    id: 3,
     icon: Users,
     title: "Coaching di Gruppo",
     subtitle: "La forza della condivisione",
@@ -38,14 +58,14 @@ const services = [
       { text: "Community privata dedicata", highlight: false }
     ],
     duration: "2-4 mesi",
-    price: "€60",
+    price: "€90",
     priceDetail: "a sessione",
     color: "from-blue-500 to-cyan-500",
     bgColor: "from-blue-50 to-cyan-50",
     popular: false
   },
   {
-    id: 3,
+    id: 4,
     icon: Target,
     title: "Intensivo Obiettivi",
     subtitle: "Risultati in tempi rapidi",
@@ -65,7 +85,7 @@ const services = [
     popular: false
   },
   {
-    id: 4,
+    id: 5,
     icon: Lightbulb,
     title: "Mindfulness Journey",
     subtitle: "La via della consapevolezza",
@@ -89,13 +109,6 @@ const services = [
 const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState(1);
 
-  const scrollToContacts = () => {
-    const element = document.getElementById('contatti');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="servizi" className="py-24 bg-gradient-to-b from-slate-50/50 via-white to-violet-50/40 relative overflow-hidden">
       {/* Background Elements */}
@@ -108,21 +121,113 @@ const ServicesSection = () => {
         
         {/* Header */}
         <div className="text-center mb-16">
-                      <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-azzurro-50 to-emerald-50 border border-azzurro-200/50 rounded-full px-4 py-2 mb-6">
-              <Sparkles className="h-4 w-4 text-azzurro-500" />
-            <span className="text-sm font-medium text-gray-700">I Miei Servizi</span>
+                      <div className="inline-flex items-center space-x-2 bg-enhanced border-enhanced rounded-full px-4 py-2 mb-6">
+              <Sparkles className="h-4 w-4 text-azzurro-500 icon-enhanced" />
+            <span className="text-sm font-bold text-high-contrast">I Miei Servizi</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Percorsi di <span className="bg-gradient-to-r from-azzurro-600 to-emerald-600 bg-clip-text text-transparent">Trasformazione</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-high-contrast">
+            Percorsi di <span className="text-azzurro-600">Trasformazione</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Ogni viaggio è unico, proprio come te. Scegli il percorso che risuona di più con i tuoi obiettivi e il tuo stile.
-          </p>
+                     <p className="text-xl text-high-contrast max-w-2xl mx-auto leading-relaxed">
+             Ogni viaggio è unico, indipendentemente dal genere o dall&apos;età. Scegli il percorso che risuona di più con i tuoi obiettivi e il tuo stile.
+           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
-          {services.map((service) => {
+        {/* Featured Service - Pacchetto Completo */}
+        <div className="mb-16">
+          <div className="relative group cursor-pointer transition-all duration-500 scale-105 shadow-2xl">
+            {/* Popular Badge */}
+                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+               <div className="bg-rose-600 text-white px-6 py-3 rounded-full text-lg font-bold flex items-center space-x-2 shadow-lg">
+                 <Star className="h-5 w-5 icon-white-enhanced" />
+                 <span>Pacchetto Principale</span>
+               </div>
+             </div>
+
+            <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-8 border-2 border-rose-300 shadow-2xl shadow-rose-500/20">
+              {/* Subtle Background Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-50 to-pink-50 opacity-30 rounded-3xl"></div>
+              
+              {/* Header */}
+              <div className="relative flex items-start justify-between mb-6">
+                                 <div className="w-16 h-16 rounded-2xl bg-rose-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                   <Target className="h-8 w-8 text-white icon-white-enhanced" />
+                 </div>
+                 <div className="text-right">
+                   <div className="text-2xl font-bold text-high-contrast">Su richiesta</div>
+                   <div className="text-base text-high-contrast">prezzo personalizzato</div>
+                 </div>
+              </div>
+
+              {/* Content */}
+              <div className="relative space-y-5">
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Pacchetto Completo</h3>
+                  <p className="text-rose-600 font-semibold text-lg">Il percorso definitivo</p>
+                </div>
+                
+                                 <p className="text-high-contrast leading-relaxed text-lg">
+                   Un programma completo che include 12 sessioni individuali, video corso esclusivo e bonus speciali che scoprirai durante la chiamata.
+                 </p>
+
+                 {/* Duration */}
+                 <div className="flex items-center space-x-2 text-base text-high-contrast">
+                   <Clock className="h-5 w-5 icon-enhanced" />
+                   <span>6-8 mesi</span>
+                 </div>
+
+                {/* Features */}
+                <div className="space-y-4 pt-4">
+                                     <div className="flex items-center space-x-3">
+                     <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-rose-600 shadow-md">
+                       <Check className="h-4 w-4 text-white icon-white-enhanced" />
+                     </div>
+                     <span className="text-lg font-bold text-high-contrast">12 sessioni individuali personalizzate</span>
+                   </div>
+                   <div className="flex items-center space-x-3">
+                     <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-gray-400 shadow-md">
+                       <Check className="h-4 w-4 text-white icon-white-enhanced" />
+                     </div>
+                     <span className="text-lg text-high-contrast">Video corso esclusivo</span>
+                   </div>
+                   <div className="flex items-center space-x-3">
+                     <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-gray-400 shadow-md">
+                       <Check className="h-4 w-4 text-white icon-white-enhanced" />
+                     </div>
+                     <span className="text-lg text-high-contrast">Bonus speciali (scopri in call)</span>
+                   </div>
+                   <div className="flex items-center space-x-3">
+                     <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-gray-400 shadow-md">
+                       <Check className="h-4 w-4 text-white icon-white-enhanced" />
+                     </div>
+                     <span className="text-lg text-high-contrast">Supporto continuo completo</span>
+                   </div>
+                   <div className="flex items-center space-x-3">
+                     <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-gray-400 shadow-md">
+                       <Check className="h-4 w-4 text-white icon-white-enhanced" />
+                     </div>
+                     <span className="text-lg text-high-contrast">Percorso completo di trasformazione</span>
+                   </div>
+                </div>
+
+                {/* CTA */}
+                                 <a
+                   href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="w-full mt-8 py-5 px-8 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 bg-rose-600 text-white shadow-xl hover:shadow-2xl hover:scale-105 btn-enhanced focus-enhanced"
+                 >
+                   <span>Scopri il Prezzo Personalizzato</span>
+                   <ArrowRight className="h-6 w-6 icon-white-enhanced" />
+                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Other Services Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-16">
+          {services.slice(1).map((service) => {
             const IconComponent = service.icon;
             return (
               <div
@@ -137,7 +242,7 @@ const ServicesSection = () => {
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-gradient-to-r from-azzurro-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
+                    <div className="bg-azzurro-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
                       <Star className="h-4 w-4" />
                       <span>Più Richiesto</span>
                     </div>
@@ -154,13 +259,13 @@ const ServicesSection = () => {
                   
                   {/* Header */}
                   <div className="relative flex items-start justify-between mb-5">
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-14 h-14 rounded-xl bg-${service.color.split(' ')[1]} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <IconComponent className="h-7 w-7 text-white" />
                     </div>
-                    <div className="text-right">
-                      <div className="text-xl font-bold text-gray-900">{service.price}</div>
-                      <div className="text-sm text-gray-600">{service.priceDetail}</div>
-                    </div>
+                                     <div className="text-right">
+                   <div className="text-xl font-bold text-high-contrast">{service.price}</div>
+                   <div className="text-sm text-high-contrast font-semibold">{service.priceDetail}</div>
+                 </div>
                   </div>
 
                   {/* Content */}
@@ -170,15 +275,15 @@ const ServicesSection = () => {
                       <p className="text-azzurro-600 font-medium text-base">{service.subtitle}</p>
                     </div>
                     
-                    <p className="text-gray-700 leading-relaxed text-base">
-                      {service.description}
-                    </p>
+                                         <p className="text-high-contrast leading-relaxed text-base">
+                       {service.description}
+                     </p>
 
-                    {/* Duration */}
-                    <div className="flex items-center space-x-2 text-sm text-gray-600">
-                      <Clock className="h-4 w-4" />
-                      <span>{service.duration}</span>
-                    </div>
+                     {/* Duration */}
+                     <div className="flex items-center space-x-2 text-sm text-high-contrast">
+                       <Clock className="h-4 w-4 icon-enhanced" />
+                       <span>{service.duration}</span>
+                     </div>
 
                     {/* Features */}
                     <div className="space-y-3 pt-4">
@@ -197,20 +302,19 @@ const ServicesSection = () => {
                     </div>
 
                     {/* CTA */}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        scrollToContacts();
-                      }}
+                    <a
+                      href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`w-full mt-6 py-4 px-6 rounded-xl font-semibold text-base transition-all duration-300 flex items-center justify-center space-x-2 ${
                         selectedService === service.id
-                                          ? 'bg-gradient-to-r from-azzurro-600 to-blue-600 text-white shadow-lg hover:shadow-xl'
-                : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-azzurro-300 hover:text-azzurro-700'
+                                          ? 'bg-azzurro-600 text-white shadow-lg hover:shadow-xl'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
                       <span>Prenota una Chiamata</span>
                       <ArrowRight className="h-5 w-5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -219,7 +323,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Bottom CTA Section */}
-                    <div className="relative overflow-hidden bg-gradient-to-br from-azzurro-600 to-emerald-600 rounded-3xl p-12 text-center text-white">
+        <div className="relative overflow-hidden bg-azzurro-600 rounded-3xl p-12 text-center text-white">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
@@ -229,30 +333,44 @@ const ServicesSection = () => {
           </div>
           
           <div className="relative z-10">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h3 className="text-3xl lg:text-4xl font-bold mb-6 text-white-high-contrast">
               Non Sai Quale Percorso Scegliere?
             </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Prenota una chiamata conoscitiva gratuita di 30 minuti. 
-              Parliamo dei tuoi obiettivi e troviamo insieme il percorso perfetto per te.
+            <p className="text-black mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+              Prenota una <strong className="text-black">chiamata conoscitiva gratuita di 30 minuti</strong>.
+              <br />
+              <span className="text-black">Parliamo dei tuoi obiettivi e troviamo insieme il percorso perfetto per te.</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                onClick={scrollToContacts}
-                className="bg-white text-azzurro-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2"
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <a
+                href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-azzurro-600 to-blue-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl hover:shadow-azzurro-500/25 transition-all duration-300 inline-flex items-center space-x-2 btn-enhanced focus-enhanced"
               >
-                <span>Chiamata Gratuita</span>
-                <ArrowRight className="h-5 w-5" />
-              </button>
-              
-              <div className="flex items-center space-x-3 text-white/80">
-                <div className="flex -space-x-2">
-                  <div className="w-8 h-8 bg-white/20 rounded-full border-2 border-white"></div>
-                  <div className="w-8 h-8 bg-white/20 rounded-full border-2 border-white"></div>
-                  <div className="w-8 h-8 bg-white/20 rounded-full border-2 border-white"></div>
+                <span>Inizia ora gratis</span>
+                <div className="text-sm bg-white/30 px-3 py-1 rounded-full font-semibold">
+                  zero vincoli, zero stress
                 </div>
-                <span className="text-sm">100% senza impegno</span>
+              </a>
+              
+              <div className="flex items-center space-x-4 text-white">
+                <div className="flex -space-x-2">
+                  <div className="w-10 h-10 bg-white/40 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                    <span className="text-black font-bold text-lg">✓</span>
+                  </div>
+                  <div className="w-10 h-10 bg-white/40 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                    <span className="text-black font-bold text-lg">✓</span>
+                  </div>
+                  <div className="w-10 h-10 bg-white/40 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                    <span className="text-black font-bold text-lg">✓</span>
+                  </div>
+                </div>
+                <div className="text-left">
+                  <div className="text-lg font-bold">100% senza impegno</div>
+                  <div className="text-sm opacity-90">Libero di decidere dopo</div>
+                </div>
               </div>
             </div>
           </div>
