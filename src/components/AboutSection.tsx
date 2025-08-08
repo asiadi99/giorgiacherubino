@@ -112,7 +112,6 @@ const AboutSection = () => {
                     : 'text-gray-500 hover:text-gray-700 hover:border-b-2 hover:border-gray-300 hover:bg-gray-50/50'
                 }`}
                 type="button"
-                aria-pressed={activeTab === 'story'}
                 role="tab"
                 aria-selected={activeTab === 'story'}
                 tabIndex={0}
@@ -127,7 +126,6 @@ const AboutSection = () => {
                     : 'text-gray-500 hover:text-gray-700 hover:border-b-2 hover:border-gray-300 hover:bg-gray-50/50'
                 }`}
                 type="button"
-                aria-pressed={activeTab === 'values'}
                 role="tab"
                 aria-selected={activeTab === 'values'}
                 tabIndex={0}

@@ -86,8 +86,12 @@ export const metadata: Metadata = {
   category: "Health & Wellness",
   classification: "Life Coaching",
   other: {
-    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION,
-    'facebook-domain-verification': process.env.FACEBOOK_DOMAIN_VERIFICATION,
+    ...(process.env.GOOGLE_SITE_VERIFICATION ? {
+      'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION
+    } : {}),
+    ...(process.env.FACEBOOK_DOMAIN_VERIFICATION ? {
+      'facebook-domain-verification': process.env.FACEBOOK_DOMAIN_VERIFICATION
+    } : {})
   },
 };
 

@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Ottimizzazioni per velocizzare il build
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
