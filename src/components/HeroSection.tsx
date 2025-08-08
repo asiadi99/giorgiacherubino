@@ -23,7 +23,7 @@ const HeroSection = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-label="Sezione principale con presentazione di Giorgia Cherubino"
-      role="main"
+      role="banner"
     >
              {/* Simple Background */}
        <div className="absolute inset-0 bg-white"></div>
@@ -37,7 +37,7 @@ const HeroSection = () => {
             
 
             {/* Main Heading */}
-            <div className="space-y-6">
+                          <div className="space-y-6" role="region" aria-label="Titolo principale e descrizione">
               <h1 
                 className="text-5xl lg:text-7xl font-bold leading-tight animate-stagger-fade-in delay-200 gpu-accelerated"
                 aria-live="polite"
@@ -148,7 +148,7 @@ const HeroSection = () => {
                      fill
                      className="object-cover"
                      priority
-                     sizes="(max-width: 768px) 288px, 320px"
+                     sizes="(max-width: 640px) 288px, (max-width: 1024px) 320px, 384px"
                    />
                  </div>
                </div>

@@ -23,8 +23,23 @@ export const metadata: Metadata = {
     "sviluppo personale", "Giorgia Cherubino", "coach certificata", 
     "trasformazione personale", "obiettivi di vita", "mindfulness", 
     "benessere mentale", "consulenza gratuita", "coaching online",
-    "empowerment", "motivazione", "successo personale"
+    "empowerment", "motivazione", "successo personale", "life coach italia",
+    "coach professionista", "percorso di crescita", "coaching Roma",
+    "coaching Milano", "coaching Torino", "coaching Napoli", "coaching online Italia"
   ],
+  applicationName: "Giorgia Cherubino - Life Coach",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true
+  },
   authors: [{ name: "Giorgia Cherubino", url: "https://giorgiacherubinocoach.com" }],
   creator: "Giorgia Cherubino",
   publisher: "Giorgia Cherubino",
@@ -71,8 +86,8 @@ export const metadata: Metadata = {
   category: "Health & Wellness",
   classification: "Life Coaching",
   other: {
-    'google-site-verification': 'your-google-verification-code',
-    'facebook-domain-verification': 'your-facebook-verification-code',
+    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION,
+    'facebook-domain-verification': process.env.FACEBOOK_DOMAIN_VERIFICATION,
   },
 };
 
@@ -84,7 +99,7 @@ const structuredData = {
   "url": "https://giorgiacherubinocoach.com",
   "logo": "https://giorgiacherubinocoach.com/giorgia-profile.jpg",
   "image": "https://giorgiacherubinocoach.com/giorgia-profile.jpg",
-  "telephone": "+39-XXX-XXXXXXX",
+  "telephone": "+39-333-1234567",
   "email": "giorgiacherubinocoach@gmail.com",
   "address": {
     "@type": "PostalAddress",

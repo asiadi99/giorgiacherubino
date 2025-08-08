@@ -76,9 +76,30 @@ cd giorgia-cherubino-site
 # Installa le dipendenze
 npm install
 
+# Configura le variabili d'ambiente
+# Crea un file .env nella root del progetto con:
+EMAIL_USER=giorgiacherubinocoach@gmail.com
+EMAIL_PASS=your_app_specific_password_here
+GOOGLE_SITE_VERIFICATION=your_google_verification_code
+FACEBOOK_DOMAIN_VERIFICATION=your_facebook_verification_code
+
 # Avvia il server di sviluppo
 npm run dev
 ```
+
+### Configurazione Email
+Per il form di contatto, è necessario:
+1. Creare una password specifica per l'app su Gmail
+   - Vai su Account Google > Sicurezza
+   - Abilita "Verifica in due passaggi"
+   - Crea una "Password per le app"
+2. Usa questa password nel file .env come EMAIL_PASS
+
+### Verifica del Sito
+Per la verifica del sito:
+1. Google Search Console: ottieni il codice di verifica
+2. Facebook Business Manager: ottieni il codice di verifica
+3. Inserisci i codici nel file .env
 
 Il sito sarà disponibile su `http://localhost:3000`
 

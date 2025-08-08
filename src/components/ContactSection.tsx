@@ -24,17 +24,34 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Errore nell\'invio del messaggio');
+      }
+
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       
-      // Reset success message after 5 seconds
+      // Reset success message after 10 seconds
       setTimeout(() => {
         setIsSubmitted(false);
-      }, 5000);
-    }, 1000);
+      }, 10000);
+    } catch (error) {
+      console.error('Errore:', error);
+      alert('Si è verificato un errore nell\'invio del messaggio. Per favore riprova più tardi.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -69,7 +86,7 @@ const ContactSection = () => {
             </div>
 
             {isSubmitted && (
-              <div className="bg-green-500/20 border border-green-500/50 rounded-xl p-4 flex items-center space-x-3">
+              <div className="bg-green-500/20 border border-green-500/50 rounded-xl p-4 flex items-center space-x-3" role="alert" aria-live="polite">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <div>
                   <p className="text-green-400 font-semibold">Messaggio inviato con successo!</p>
@@ -78,7 +95,7 @@ const ContactSection = () => {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" aria-label="Form di contatto" role="form">
               <div>
                 <label htmlFor="name" className="block text-lg font-semibold text-white mb-3">
                   Nome Completo *

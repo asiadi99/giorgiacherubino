@@ -76,11 +76,14 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white-high-contrast hover:text-white focus-enhanced rounded-lg p-2 transition-colors duration-200"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMenuOpen ? "Chiudi menu" : "Apri menu"}
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6 icon-white-enhanced" />
+                <X className="h-6 w-6 icon-white-enhanced" aria-hidden="true" />
               ) : (
-                <Menu className="h-6 w-6 icon-white-enhanced" />
+                <Menu className="h-6 w-6 icon-white-enhanced" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -88,35 +91,35 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-2 bg-dark-enhanced border-t-2 border-white/30">
+          <div className="md:hidden" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+            <div className="px-2 pt-2 pb-3 space-y-2 bg-dark-enhanced border-t-2 border-white/30 animate-fade-in">
               <button
                 onClick={() => scrollToSection('home')}
-                className="block w-full text-left px-4 py-3 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced"
+                className="block w-full text-left px-4 py-4 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced touch-target"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left px-4 py-3 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced"
+                className="block w-full text-left px-4 py-4 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced touch-target"
               >
                 Chi Sono
               </button>
               <button
                 onClick={() => scrollToSection('servizi')}
-                className="block w-full text-left px-4 py-3 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced"
+                className="block w-full text-left px-4 py-4 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced touch-target"
               >
                 Servizi
               </button>
               <button
                 onClick={() => scrollToSection('testimonianze')}
-                className="block w-full text-left px-4 py-3 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced"
+                className="block w-full text-left px-4 py-4 text-white-high-contrast hover:text-white hover:bg-white/20 rounded-xl font-semibold transition-all duration-200 focus-enhanced touch-target"
               >
                 Testimonianze
               </button>
               <button
                 onClick={() => scrollToSection('contatti')}
-                className="block w-full mt-4 btn-white-enhanced px-6 py-3 rounded-full font-bold text-center hover:scale-105 transition-all duration-300 focus-enhanced"
+                className="block w-full mt-4 btn-white-enhanced px-6 py-4 rounded-full font-bold text-center hover:scale-105 transition-all duration-300 focus-enhanced touch-target"
               >
                 Contatti
               </button>

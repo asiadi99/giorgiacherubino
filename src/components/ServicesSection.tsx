@@ -40,8 +40,8 @@ const services = [
     duration: "3-6 mesi",
     price: "€120",
     priceDetail: "a sessione",
-    color: "from-azzurro-500 to-blue-500",
-    bgColor: "from-azzurro-50 to-blue-50",
+    color: "from-rose-500 to-pink-500",
+    bgColor: "from-rose-50 to-pink-50",
     popular: false
   },
   {
@@ -60,8 +60,8 @@ const services = [
     duration: "2-4 mesi",
     price: "€90",
     priceDetail: "a sessione",
-    color: "from-blue-500 to-cyan-500",
-    bgColor: "from-blue-50 to-cyan-50",
+    color: "from-violet-500 to-purple-500",
+    bgColor: "from-violet-50 to-purple-50",
     popular: false
   },
   {
@@ -110,7 +110,7 @@ const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState(1);
 
   return (
-    <section id="servizi" className="py-24 bg-gradient-to-b from-slate-50/50 via-white to-violet-50/40 relative overflow-hidden">
+    <section id="servizi" className="py-24 bg-gradient-to-b from-slate-50/50 via-white to-violet-50/40 relative overflow-hidden" aria-label="Sezione servizi e pacchetti di coaching">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-azzurro-200/15 to-blue-200/15 rounded-full blur-3xl"></div>
@@ -177,7 +177,7 @@ const ServicesSection = () => {
                  </div>
 
                 {/* Features */}
-                <div className="space-y-4 pt-4">
+                <div className="space-y-4 pt-4" role="list" aria-label="Caratteristiche del pacchetto">
                                      <div className="flex items-center space-x-3">
                      <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-rose-600 shadow-md">
                        <Check className="h-4 w-4 text-white icon-white-enhanced" />
@@ -238,6 +238,15 @@ const ServicesSection = () => {
                     : 'hover:scale-102 hover:shadow-xl'
                 }`}
                 onClick={() => setSelectedService(service.id)}
+                role="button"
+                tabIndex={0}
+                aria-pressed={selectedService === service.id}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedService(service.id);
+                  }
+                }}
               >
                 {/* Popular Badge */}
                 {service.popular && (
@@ -249,18 +258,18 @@ const ServicesSection = () => {
                   </div>
                 )}
 
-                <div className={`relative bg-white/90 backdrop-blur-sm rounded-2xl p-6 border-2 transition-all duration-300 shadow-lg ${
+                <div className={`relative bg-white/95 backdrop-blur-sm rounded-2xl p-8 border-2 transition-all duration-300 shadow-lg ${
                   selectedService === service.id 
-                                    ? 'border-azzurro-300 shadow-2xl shadow-azzurro-500/10'
-                : 'border-gray-200/50 hover:border-azzurro-200 hover:shadow-xl'
+                    ? `border-${service.color.split(' ')[1]} shadow-2xl shadow-${service.color.split(' ')[1]}/20`
+                    : `border-${service.color.split(' ')[1]}/30 hover:border-${service.color.split(' ')[1]}/50 hover:shadow-xl`
                 }`}>
                   {/* Subtle Background Gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor} opacity-20 rounded-2xl`}></div>
                   
                   {/* Header */}
                   <div className="relative flex items-start justify-between mb-5">
-                    <div className={`w-14 h-14 rounded-xl bg-${service.color.split(' ')[1]} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className="h-7 w-7 text-white" />
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg border-2 border-white/50`}>
+                      <IconComponent className="h-8 w-8 text-white drop-shadow-lg" />
                     </div>
                                      <div className="text-right">
                    <div className="text-xl font-bold text-high-contrast">{service.price}</div>
@@ -271,8 +280,8 @@ const ServicesSection = () => {
                   {/* Content */}
                   <div className="relative space-y-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                      <p className="text-azzurro-600 font-medium text-base">{service.subtitle}</p>
+                      <h3 className="text-3xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">{service.title}</h3>
+                      <p className={`text-${service.color.split(' ')[1]} font-semibold text-lg`}>{service.subtitle}</p>
                     </div>
                     
                                          <p className="text-high-contrast leading-relaxed text-base">
@@ -286,15 +295,15 @@ const ServicesSection = () => {
                      </div>
 
                     {/* Features */}
-                    <div className="space-y-3 pt-4">
+                    <div className="space-y-3 pt-4" role="list" aria-label="Caratteristiche del servizio">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3">
-                          <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
-                            feature.highlight ? 'bg-azzurro-500' : 'bg-gray-300'
-                          }`}>
-                            <Check className={`h-3 w-3 ${feature.highlight ? 'text-white' : 'text-gray-600'}`} />
+                          <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
+                            feature.highlight ? `bg-gradient-to-br ${service.color} shadow-lg` : 'bg-gray-200'
+                          } border border-white/50`}>
+                            <Check className={`h-4 w-4 ${feature.highlight ? 'text-white drop-shadow' : 'text-gray-500'}`} />
                           </div>
-                          <span className={`text-base ${feature.highlight ? 'font-semibold text-gray-900' : 'text-gray-700'}`}>
+                          <span className={`text-base ${feature.highlight ? `font-bold text-${service.color.split(' ')[1]}` : 'text-gray-600 font-medium'}`}>
                             {feature.text}
                           </span>
                         </div>
@@ -306,14 +315,10 @@ const ServicesSection = () => {
                       href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-full mt-6 py-4 px-6 rounded-xl font-semibold text-base transition-all duration-300 flex items-center justify-center space-x-2 ${
-                        selectedService === service.id
-                                          ? 'bg-azzurro-600 text-white shadow-lg hover:shadow-xl'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
+                      className={`w-full mt-6 py-5 px-8 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 bg-gradient-to-r ${service.color} text-white shadow-lg hover:shadow-xl hover:scale-105 border border-white/20`}
                     >
                       <span>Prenota una Chiamata</span>
-                      <ArrowRight className="h-5 w-5" />
+                      <ArrowRight className="h-6 w-6" />
                     </a>
                   </div>
                 </div>
@@ -333,38 +338,45 @@ const ServicesSection = () => {
           </div>
           
           <div className="relative z-10">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-6 text-white-high-contrast">
-              Non Sai Quale Percorso Scegliere?
-            </h3>
-            <p className="text-black mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-              Prenota una <strong className="text-black">chiamata conoscitiva gratuita di 30 minuti</strong>.
-              <br />
-              <span className="text-black">Parliamo dei tuoi obiettivi e troviamo insieme il percorso perfetto per te.</span>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-azzurro-600 to-blue-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-xl hover:shadow-azzurro-500/25 transition-all duration-300 inline-flex items-center space-x-2 btn-enhanced focus-enhanced"
-              >
-                <span>Inizia ora gratis</span>
-                <div className="text-sm bg-white/30 px-3 py-1 rounded-full font-semibold">
-                  zero vincoli, zero stress
-                </div>
-              </a>
+            <div className="space-y-8 bg-gradient-to-br from-blue-900/80 to-azzurro-900/80 backdrop-blur-lg rounded-3xl p-10 border border-blue-300/10">
+              <div className="inline-flex items-center space-x-2">
+                <Sparkles className="h-6 w-6 text-yellow-300" />
+                <span className="text-white text-3xl lg:text-4xl font-bold">Non Sai Quale Percorso Scegliere?</span>
+              </div>
+              
+              <div className="space-y-4 max-w-3xl mx-auto">
+                <p className="text-2xl font-bold text-white">
+                  Prenota una <span className="text-yellow-300">chiamata conoscitiva gratuita di 30 minuti</span>
+                </p>
+                <p className="text-xl text-white">
+                  Parliamo dei tuoi obiettivi e troviamo insieme il percorso perfetto per te
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a
+                  href="https://docs.google.com/forms/d/1rCvOWrc85UFEtRNFgWtAzJyM8bQ8a7_z8I5iCRbLl8I/preview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-yellow-400 text-black px-10 py-5 rounded-full font-bold text-xl hover:bg-yellow-300 transition-all duration-300 inline-flex items-center space-x-2 btn-enhanced focus-enhanced"
+                >
+                  <span>Inizia ora gratis</span>
+                  <div className="text-sm bg-black/10 px-3 py-1 rounded-full font-semibold">
+                    zero vincoli, zero stress
+                  </div>
+                </a>
+              </div>
               
               <div className="flex items-center space-x-4 text-white">
                 <div className="flex -space-x-2">
                   <div className="w-10 h-10 bg-white/40 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-                    <span className="text-black font-bold text-lg">✓</span>
+                    <span className="text-white-high-contrast font-bold text-lg">✓</span>
                   </div>
                   <div className="w-10 h-10 bg-white/40 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-                    <span className="text-black font-bold text-lg">✓</span>
+                    <span className="text-white-high-contrast font-bold text-lg">✓</span>
                   </div>
                   <div className="w-10 h-10 bg-white/40 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-                    <span className="text-black font-bold text-lg">✓</span>
+                    <span className="text-white-high-contrast font-bold text-lg">✓</span>
                   </div>
                 </div>
                 <div className="text-left">
